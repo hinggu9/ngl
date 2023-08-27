@@ -2,7 +2,7 @@ import requests, threading, asyncio
 
 instagram = "" #NGL 아이디
 message = "" #질문
-device = "none"
+device = ""
 
 async def go():
     req = requests.Session()
@@ -14,5 +14,5 @@ async def go():
     print('\033[32m' + f"[ NGL ] Submit 을 Post 시도했어요!" + '\033[0m')
     print('\033[33m' + f"[ NGL value ] {r}" + '\033[0m')
 
-for i in range(int(100)):
+for i in range(int(10)): #기본 보낼갯수
     threading.Thread(target=asyncio.run, args=(go(),)).start()
